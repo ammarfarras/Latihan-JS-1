@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biaya Parkir</title>
+</head>
+<body>
+    <h1>Biaya Parkir</h1>
+<table class="cost">
+    <tr>
+        <th>Jam Masuk</th>
+        <th>Jam Keluar</th>
+        <th>Lama Parkir</th>
+        <th>Biaya</th>
+    </tr>
+    <tr>
+        <td><input type="number" placeholder="Jam Masuk" id="masuk" onchange="hitung()"></td>
+        <td><input type="number" placeholder="Jam Keluar" id="keluar" onchange="hitung()"></td>
+        <td><input type="text" placeholder="Lamanya" id="lama"></td>
+        <td><button onclick="hitung()">Submit</button></td>
+        <td id="hitung"></td>
+    </tr>
+</table>
+
+<script>
+    function hitung(){
+        // let nf = new Intl.NumberFormat("id-ID")
+        let jamMasuk = document.getElementById("masuk").value;
+        let jamKeluar = document.getElementById("keluar").value;
+        let lama = jamKeluar - jamMasuk;
+        document.getElementById("lama").value = lama + " Jam";
+        let biaya = 0;
+        const biaya_awal = 3000;
+        const biaya_perjam = 1000;
+        if (lama <= 2) {
+            let hitung = document.getElementById("hitung");
+            hitung.innerHTML = biaya_awal;
+        } else {
+            let hitung_jam = lama - 2;
+            let hasil = biaya_awal + (hitung_jam * biaya_perjam);
+            let hitung = document.getElementById("hitung");
+            hitung.innerHTML = hasil;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KursRupiah</title>
+</head>
+<body>
+    <h1>Kurs Mata Uang</h1>
+1$ = Rp 14.650
+<table border="2" cellspacing="0" cellpadding="2">
+    <tr style="text-align: center;">
+        <td>IDR</td>
+        <td>Dollar</td>
+        <td>Konversi IDR ke Dollar</td>
+    </tr>
+    <tr>
+        <td>Rp<input type="number" id="idr" value=""></td>
+        <td><button onclick="Convert()">Convert</button></td>
+        <td id="hasilKurs"></td>
+    </tr>
+</table>
+
+
+<script>
+    function Convert() {
+        const dollar = 1 / 14650;
+        console.log(dollar);
+        let idr = document.getElementById("idr").value;
+        console.log(idr);
+        let konversi = idr * dollar;
+        console.log(konversi);
+        let hasil_konv = document.getElementById("hasilKurs");
+        hasil_konv.innerHTML = konversi + "$";
+    }
+</script>
+</body>
+</html>

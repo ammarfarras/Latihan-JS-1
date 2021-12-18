@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luas Lingkaran</title>
+    <link rel="stylesheet" href="luasling.css">
+</head>
+<body>
+  <div class="container"></div>
+    <div>
+        <h2>Luas Dan Keliling Lingkaran</h2><br>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Masukkan Nilai</th>
+                    <th>Hasil</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="number" placeholder="Masukkan Nilai Jari-Jari Lingkaran (cm)" id="jari">
+                    </td>
+                    <td>
+                        <button onclick="lingkaran()">Hitung Keliling Lingkaran</button>
+                    </td>
+                    <td>
+                        Hasil:<span id="hasil"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" placeholder="Masukkan Nilai Jari-Jari Lingkaran (cm)" id="luas">
+                    </td>
+                    <td>
+                        <button onclick="lingkaran()">Hitung Luas Lingkaran</button>
+                    </td>
+                    <td>
+                        Hasil:<span id="hasilluas"
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<script src="luasling.js"></script>
+</body>
+</html>
